@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Labaratory_work</string>
+    <string name="next_plans">Ближайшие планы</string>
+    <string name="today">Сегодня</string>
+    <string name="not_plans_today">                  На сегодня планов нет</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="not_plans_tomorrow">                  На завтра планов нет</string>
+    <string name="new_plan1">  Создание</string>
+    <string name="new_plan2">  Нового</string>
+    <string name="new_plan3">  Плана</string>
+    <string name="new_plan_write">  Впишите новый план</string>
+    <string name="date">  Дата</string>
+    <string name="time">  Время</string>
+    <string name="add">Добавить</string>
+    <string name="cancel">Отменить</string>
+    <string name="chose_background">Выберите фон</string>
+    <string name="weekly">weekly</string>
+    <string name="back">back</string>
+    <string name="forward">forward</string>
+    <string name="forw">forw</string>
+    <string name="Pn">Пн</string>
+    <string name="Vt">Вт</string>
+    <string name="Sr">Ср</string>
+    <string name="Cht">Чт</string>
+    <string name="Pt">Пт</string>
+    <string name="Sb">Сб</string>
+    <string name="Vs">Вс</string>
+    <string name="noHavePlandToday">        На этот день нет планов</string>
+</resources>

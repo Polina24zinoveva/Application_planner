@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item>
+<!--            форма-->
+            <shape android:shape = "rectangle">
+<!--                сплошной цвет-->
+                <solid android:color = "@null"/>
+<!--                радиус закругления углов-->
+            </shape>
+        </item>
+</selector>

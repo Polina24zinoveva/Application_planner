@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/random"
+    android:backgroundTint="@null"
+    android:backgroundTintMode="src_atop"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/today_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/today"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+    <TextView
+        android:id="@+id/tomorrow_plans_textView"
+        android:layout_width="350dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_1"
+        android:gravity="center_vertical"
+        android:onClick="onWeekCalendarClickTomorrow"
+        android:scrollbarSize="10dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:text="@string/not_plans_tomorrow"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tomorrow_textView"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tomorrow_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/tomorrow"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_plans_textView" />
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:background="@null"
+        android:onClick="onSettingClick"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tomorrow_plans_textView"
+        app:srcCompat="@drawable/setting"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/new_plan_button"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="28dp"
+        android:background="@null"
+        android:contentDescription="TODO"
+        android:onClick="onNewPlanClick"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settings_button"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/calendar_button"
+        app:layout_constraintTop_toBottomOf="@+id/tomorrow_plans_textView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/add"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/calendar_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="22dp"
+        android:background="@null"
+        android:onClick="onCalendarClick"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settings_button"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="@+id/tomorrow_plans_textView"
+        app:srcCompat="@drawable/calendar"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/next_plans"
+        android:textAllCaps="false"
+
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/today_plans_textView"
+        android:layout_width="350dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_1"
+        android:fadeScrollbars="false"
+        android:gravity="fill_vertical"
+        android:isScrollContainer="false"
+        android:linksClickable="false"
+        android:onClick="onWeekCalendarClickToday"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbarSize="10dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:text="@string/not_plans_today"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_textView"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textViewUnderTodayPlans"
+        android:layout_width="343dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="3dp"
+        android:alpha="0.6"
+        app:layout_constraintBottom_toBottomOf="@+id/today_plans_textView"
+        app:layout_constraintEnd_toEndOf="@+id/today_plans_textView"
+        app:layout_constraintStart_toStartOf="@+id/today_plans_textView" />
+
+    <TextView
+        android:id="@+id/textViewUnderTomorrowPlans"
+        android:layout_width="346dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="4dp"
+        android:alpha="0.6"
+        app:layout_constraintBottom_toBottomOf="@+id/tomorrow_plans_textView"
+        app:layout_constraintEnd_toEndOf="@+id/tomorrow_plans_textView"
+        app:layout_constraintStart_toStartOf="@+id/tomorrow_plans_textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
